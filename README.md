@@ -328,9 +328,7 @@ The relatively lower values for variables such as Grade and Interest Rate indica
 ## Main Findings
 
 - Feature engineering improves the financial interpretation of the input data.
-- The dataset exhibits substantial class imbalance, making Recall, F1-score and AUC important evaluation metrics.
 - Unsupervised clustering provides an exploratory view of borrower segmentation.
-- PCA allows the multidimensional borrower profiles to be visualized in two dimensions.
 - Random Forest achieves the strongest overall classification performance.
 - KNN achieves the highest Recall and identifies the largest proportion of charged-off loans.
 - Grade, recent credit inquiries, loan-to-income ratio and interest rate are among the most relevant explanatory variables.
@@ -375,4 +373,4 @@ The notebook therefore requires the dataset to be downloaded separately and plac
 
 `dataset_1_lendingclub.csv`
 
-The project is intended as a machine learning and credit risk modeling exercise rather than as a production-ready credit scoring system.
+The project is intended as a machine learning and credit risk modeling exercise rather than as a production ready credit scoring system.
