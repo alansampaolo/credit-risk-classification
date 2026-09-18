@@ -40,10 +40,6 @@ Each observation represents a loan and includes information on:
 
 The original dataset is not included in this repository because of its large file size.
 
-The notebook expects the dataset to be available locally under the following filename:
-
-`dataset_1_lendingclub.csv`
-
 ## Feature Engineering
 
 Several financially meaningful variables are created from the original data.
