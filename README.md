@@ -206,7 +206,7 @@ For the Random Forest model:
                 Predicted 0   Predicted 1
 True 0              147           19
 True 1               18          136
-
+```
 This corresponds to:
 
 - True Negatives: `147`
