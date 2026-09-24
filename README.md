@@ -13,6 +13,8 @@ The objective is to classify loans into two outcomes:
 
 The project investigates how borrower characteristics, loan features and engineered financial indicators can be used to predict credit risk.
 
+The ultimate objective is to identify a model that can generalize well to previously unseen loan applicants and support future credit-risk assessment by distinguishing higher-risk from lower-risk loans.
+
 The workflow includes:
 
 1. data preprocessing and feature engineering;
@@ -330,6 +332,7 @@ The relatively lower values for variables such as Grade and Interest Rate indica
 - Feature engineering improves the financial interpretation of the input data.
 - Unsupervised clustering provides an exploratory view of borrower segmentation.
 - Random Forest achieves the strongest overall classification performance.
+- Among the models considered, Random Forest therefore represents the strongest candidate for predicting the credit risk of new, unseen loan observations within the scope of this study.
 - KNN achieves the highest Recall and identifies the largest proportion of charged-off loans.
 - Grade, recent credit inquiries, loan-to-income ratio and interest rate are among the most relevant explanatory variables.
 - RGR values close to one indicate that the Random Forest predictions are generally robust to the perturbations considered.
