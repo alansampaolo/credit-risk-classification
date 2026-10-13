@@ -48,6 +48,6 @@ Evaluated on a held-out test set of 10,000 loans (default rate: 19.6%):
 - `credit_risk_classification.ipynb` — full Python workflow
 - `credit_risk_classification_presentation.pdf` — project presentation
 
-The Lending Club dataset (~1.5 GB) is not included. To run the notebook, download it separately and save it as `dataset_1_lendingclub.csv` in the working directory.
+The Lending Club dataset (~1.5 GB) is not included.
 
 **Tools:** Python · pandas · NumPy · scikit-learn · imbalanced-learn · XGBoost · Matplotlib · seaborn
