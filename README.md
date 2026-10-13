@@ -41,7 +41,6 @@ Evaluated on a held-out test set of 10,000 loans (default rate: 19.6%):
 
 - Hyperparameters are not tuned: tree-based models in particular could improve.
 - The classification threshold is fixed at 0.5; in practice it should reflect the relative cost of a missed default versus a rejected good borrower.
-- This is a modelling exercise, not a production credit scoring system.
 
 ## Repository
 
