@@ -25,12 +25,13 @@ Evaluated on a held-out test set of 10,000 loans (default rate: 19.6%):
 
 ## Method
 
-1. **Data and features** — Lending Club loan-level data (random sample of 50,000 loans). Engineered financial indicators such as loan-to-income ratio, credit usage ratio, credit age and average FICO score.
-2. **Preprocessing** — ordinal encoding for loan grade, one-hot encoding for home ownership, outlier removal and min-max scaling.
-3. **Exploration** — K-Means clustering and PCA to look for natural borrower segments (exploratory only, not used as predictors).
-4. **Class imbalance** — SMOTE oversampling applied **inside the cross-validation pipeline**, only on training folds. Validation folds and the test set keep the real class distribution, so there is no data leakage.
-5. **Model comparison** — stratified 5-fold cross-validation and a final evaluation on a held-out test set (80/20 split), using ROC-AUC, PR-AUC, precision, recall and F1 rather than accuracy alone.
-6. **SAFE AI** — explainability (RGE) and robustness (RGR) of each model.
+1. **Data and features** — Lending Club loan-level data (random sample of 50,000 loans), using only information available at origination. Engineered financial indicators such as loan-to-income ratio, credit usage ratio, average FICO score and credit age at the loan issue date.
+2. **Train/test split first** — stratified 80/20 split performed before any statistical preprocessing, so the test set keeps the real distribution of borrowers and default rate.
+3. **Preprocessing without leakage** — ordinal encoding for loan grade and one-hot encoding for home ownership; outlier removal estimated and applied on the training set only; min-max scaling fitted inside the model pipeline.
+4. **Class imbalance** — SMOTE oversampling applied inside the same pipeline, so scaling and synthetic defaults are fitted only on training folds and never touch validation folds or the test set.
+5. **Model comparison** — stratified 5-fold cross-validation on the training set and a final evaluation on the held-out test set, using ROC-AUC, PR-AUC, precision, recall and F1 rather than accuracy alone.
+6. **Exploration** — K-Means clustering and PCA on the training set to look for natural borrower segments (exploratory only, not used as predictors).
+7. **SAFE AI** — explainability (RGE) and robustness (RGR) of each model.
 
 ## SAFE AI findings (logistic regression)
 
